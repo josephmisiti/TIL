@@ -1,0 +1,7 @@
+##### You can make pip quiet
+
+Sick of seeing all of the `pip` output? Tell it to be quiet!
+
+```
+pip install --quiet -r requirements.txt
+```
