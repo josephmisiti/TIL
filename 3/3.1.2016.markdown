@@ -12,6 +12,9 @@ class QuoteView(viewsets.ModelViewSet):
 
 ```
 
+For more info, go [here](http://www.django-rest-framework.org/api-guide/filtering/#specifying-filter-fields)
+
+
 ##### Albert King is awesome
 
 [Albert King](https://en.wikipedia.org/wiki/Albert_King) is a great blues guitarist. I listen
