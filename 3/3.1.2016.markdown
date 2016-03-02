@@ -1,0 +1,17 @@
+##### Django Rest Framework Filtering Parameters
+
+You can very easily added filtering query parameters to DRF using syntax like follows:
+
+```python
+class QuoteView(viewsets.ModelViewSet):
+    permission_classes = (IsAuthenticated, )
+    queryset = models.Quote.objects.all()
+    serializer_class = serializers.QuoteSerializer
+    filter_backends = (filters.DjangoFilterBackend,)
+    filter_fields = ('submission', )
+
+```
+
+##### Albert King is awesome
+
+Albert King (no relation to BB king) is a great blues guitarist

@@ -1,0 +1,16 @@
+#### Loading data in ajax in react
+
+```javascript
+    componentDidMount: function() {
+        var self = this;
+        API.quote.get({
+            submission: window.data.submission.id,
+            success: function(quotes) {
+                self.setState({quotes: quotes})
+            },
+            error: function(response){
+                console.error(response)
+            }
+        })
+    },
+```
