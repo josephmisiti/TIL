@@ -16,3 +16,16 @@ This is how you should data asynchronously via ajax using `react.js`
         })
     },
 ```
+
+##### Debugger in javascript
+
+if you want to automatically jump into chromes debugger, simply add `debugger` and refresh!
+
+
+```javascript
+
+function FuckedUpFunction() {
+    debugger
+}
+
+```
