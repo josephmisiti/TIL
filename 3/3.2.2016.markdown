@@ -1,5 +1,7 @@
 #### Loading data in ajax in react
 
+This is how you should data asynchronously via ajax using `react.js`
+
 ```javascript
     componentDidMount: function() {
         var self = this;

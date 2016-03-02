@@ -14,4 +14,5 @@ class QuoteView(viewsets.ModelViewSet):
 
 ##### Albert King is awesome
 
-Albert King (no relation to BB king) is a great blues guitarist
+[Albert King](https://en.wikipedia.org/wiki/Albert_King) is a great blues guitarist. I listen
+to a bunch of his albums on spotify, King of Blues Guitar was the best
