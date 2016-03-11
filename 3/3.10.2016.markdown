@@ -1,0 +1,5 @@
+#### Installing a specific version w/ npm
+
+```
+npm install --save react@0.13.0-rc2
+```
