@@ -1,0 +1,5 @@
+Example upgrading `jest`
+
+```
+npm install jest@* --save
+```
