@@ -1,0 +1,23 @@
+#### How to do action specific permissions in DRF
+
+You need to look at `view.action` to set specific REST action-related permissions
+
+
+```
+class HasUnderWriterPermission(BasePermission):
+
+    def has_permission(self, request, view):
+
+        if request.user.is_superuser:
+            return True
+                        
+        if view.action == "destroy" and request.user.is_authenticated():
+            if request.user.user_type != USER_TYPE.UNDERWRITER:
+                return False
+        if view.action == "create" and request.user.is_authenticated():
+            if request.user.user_type != USER_TYPE.UNDERWRITER:
+                return False
+        
+        return True
+
+```
