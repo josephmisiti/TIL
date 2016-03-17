@@ -1,0 +1,59 @@
+#### Filter/Excluding Parameters using Django DRF
+
+If you want to create queries like the following
+
+```
+https://example.com/api/v1/buildings/?fields=id,latitude,longitude,submission
+```
+
+or
+
+```
+https://example.com/api/v1/buildings/?fields=id,latitude,longitude,submission&submission=120
+```
+
+This can be done by modifying two sections of code.
+
+First, update the construct in your serializer as follows:
+
+
+```python
+
+class BuildingSerializer(serializers.ModelSerializer):
+    """ `Building` model serializer """
+    
+    def __init__(self, *args, **kwargs):
+        
+        super(BuildingSerializer, self).__init__(*args, **kwargs)
+        request = self.context.get("request")
+        if request and request.query_params.get('fields'):
+            fields = request.query_params.get('fields')
+            if fields:
+                fields = fields.split(',')
+                allowed = set(fields)
+                existing = set(self.fields.keys())
+                for field_name in existing - allowed:
+                    self.fields.pop(field_name)
+ 
+```
+
+And override the `get_queryset` method in your `APIView`:
+
+
+```python
+
+class BuildingView(viewsets.ModelViewSet):
+    permission_classes = (IsAuthenticated, )
+    queryset = models.Building.objects.all()
+    serializer_class = serializers.BuildingSerializer
+
+    def get_queryset(self):
+        """ allow rest api to filter by submissions """
+        queryset = models.Building.objects.all()
+        submission = self.request.query_params.get('submission', None)
+        if submission is not None:
+            queryset = queryset.filter(submission=submission)
+        
+        return queryset
+
+```
