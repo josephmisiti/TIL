@@ -9,7 +9,7 @@ also a javascript object with one required property, `type`
 not modify the input. They do not do non-deterministic things like update databases or require network connection.
 Non-pure functions are the opposite of pure functions
 
-1. To describe state mutations, you need to write a pure function that takes the 1) previous state of the application, 
+1. To describe state mutations (`reducer`), you need to write a pure function that takes the 1) previous state of the application, 
 2) the action that was dispatched, and returns the new state of the application. This function is the reducer and it has to
 be pure.
 
@@ -18,3 +18,7 @@ function someReducer(state, action) {
     return newState
 }
 ```
+
+1. The `store` in redux, binds the three prin of `state`, `actions`, and `reducers`. It holds the current
+application `state`, it lets you dispatch `actions`, and when you create it, you need to specify the `reducer` of how state 
+is updated with actions.
