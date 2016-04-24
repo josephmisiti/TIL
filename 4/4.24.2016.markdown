@@ -12,3 +12,9 @@ Non-pure functions are the opposite of pure functions
 1. To describe state mutations, you need to write a pure function that takes the 1) previous state of the application, 
 2) the action that was dispatched, and returns the new state of the application. This function is the reducer and it has to
 be pure.
+
+```javascript
+function someReducer(state, action) {
+    return newState
+}
+```
