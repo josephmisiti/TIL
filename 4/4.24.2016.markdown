@@ -1,0 +1,14 @@
+#### Redux Concepts
+
+1. Application State is maintained in single javascript object (global)
+
+1. If a compenent wants change the state, he needs to dispatch an action, which is 
+also a javascript object with one required property, `type`
+
+1. Pure functions are deterministic. If you call them you know what the output will be, and they do 
+not modify the input. They do not do non-deterministic things like update databases or require network connection.
+Non-pure functions are the opposite of pure functions
+
+1. To describe state mutations, you need to write a pure function that takes the 1) previous state of the application, 
+2) the action that was dispatched, and returns the new state of the application. This function is the reducer and it has to
+be pure.
