@@ -22,3 +22,14 @@ be pure.
 1. The `store` in redux, binds the three prin of `state`, `actions`, and `reducers`. It holds the current
 application `state`, it lets you dispatch `actions`, and when you create it, you need to specify the `reducer` of how state 
 is updated with actions.
+
+    The store has three important functions:
+    
+    `getState()` - returns the current application state
+    `dispatch()` - lets you dispatch actiosn to change the state of your application
+    `subscribe()` - lets you register a callback that will be called anytime by the store anytime an action has been
+    dispatched
+    
+1. You need use `slice` and `concatenate` instead of `splice`, etc to updating arrays without mutation.
+
+1. To update Objects without mutation (because of react), use `Object.assign()`

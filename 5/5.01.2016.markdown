@@ -1,0 +1,20 @@
+### Plotting images in numpy
+
+If you need to plot an image in numpy, and want to write directly to the file
+you can do so as:
+
+```python
+import matplotlib
+import matplotlib.pyplot as plt
+import matplotlib.cm as cm
+
+plt.ioff()
+
+from utils import *
+
+X_train, y_train, X_val, y_val, X_test, y_test = load_dataset()
+
+plt.figure()
+plt.plot(X_train[0][0], cmap=cm.binary)
+plt.savefig('example.png')
+```
