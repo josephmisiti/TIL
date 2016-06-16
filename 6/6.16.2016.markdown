@@ -1,0 +1,39 @@
+##### Exporting multiple Components in ES6
+
+##### Using `export default`
+
+```javascript
+class MyClass extends Component {
+ ...
+}
+
+export default MyClass;
+
+```
+
+And to import
+
+```javascript
+import MyClass from './MyClass.react'
+```
+
+##### Multiple Exported Components In One File
+
+```
+export class MyClass1 extends Component {
+ ...
+}
+
+export class MyClass2 extends Component {
+ ...
+}
+```
+
+And to import
+
+```javascript
+import {MyClass1, MyClass2} from './MyClass.react'
+```
+
+
+
