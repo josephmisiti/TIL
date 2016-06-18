@@ -1,0 +1,19 @@
+#### From DNA to Protein
+
+[link](https://www.youtube.com/watch?v=gG7uCskUOrA)
+
+##### DNA Transcription
+
+Most human cells have a nuclear (eukaryotes) and inside this nuclear there are 23 chromosomes, each of which
+contains long strands of DNA. Within DNA, there are genes and when a gene is "activated", a gene called RNA polymerase attaches to the
+to the start of the gene. It moves along the DNA create a strand of messenger RNA uses free bases floating
+inside the nucleus. (DNA code determines the order). 
+
+##### Creation of Protein
+
+MRNA needs to be processed before it can be turned into proteins. MRNA moves out of nucleus in cytoplasm where
+ribosome (protein factories) binds to the RNA, reading the code and produces a chain of amino acids. Transfer 
+RNA molecules carry the amino acid to the ribosome. They are read three bases at a time creating a chain of amino
+acids
+
+Once the last amino acid has been added, the chain folds and the protein is created!
