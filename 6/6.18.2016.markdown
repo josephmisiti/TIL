@@ -1,0 +1,10 @@
+### DNA Transcription
+
+* occurs in the nucleus of the cell
+* DNA is used as a template to make messenger RNA (mRNA)
+
+### DNA Translation
+
+* occurs in the cytoplasm of the cell (outside the nucleus)
+* mRNA is used to create a polypeptide
+*
